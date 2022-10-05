@@ -28,5 +28,10 @@
         {
             return this.Name;
         }
+
+        public int Size
+        {
+            get { return Name.Length; }
+        }
     }
 }
