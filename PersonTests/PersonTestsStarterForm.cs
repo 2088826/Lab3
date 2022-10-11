@@ -15,7 +15,7 @@ namespace PersonTests
             this.InitializeComponent();
         }
 
-       /* private static int TestSize()
+        /*private static int TestSize()
         {
             Person person = new("Test");
             if (person.Size == 4)
@@ -59,7 +59,7 @@ namespace PersonTests
             }
         }
 
-        /*private static int TestDisplay()
+        private static int TestDisplay()
         {
             try
             {
@@ -72,14 +72,14 @@ namespace PersonTests
             }
 
             return 0;
-            }*/
+            }
 
         private void RunTestsButton_Click(object sender, EventArgs e)
             {
             this.failedTests = 0;
 
             // Run feature tests here
-            // this.failedTests += TestDisplay();
+            this.failedTests += TestDisplay();
             this.failedTests += TestCompare();
 
             // this.failedTests += TestReset();

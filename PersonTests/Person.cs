@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents one person saving their name.
     /// </summary>
-    public class Person : IComparable<Person>
+    public class Person : IComparable<Person>, IDisplayable
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
@@ -28,6 +28,16 @@
         {
             return this.Name;
         }
+
+        /// <summary>
+        /// This method displays the Name of the Person.
+        /// </summary>
+        public void Display()
+        {
+            MessageBox.Show(this.Name);
+        }
+
+
 
         /// <summary>
         /// Compares two instances of the Person class.
