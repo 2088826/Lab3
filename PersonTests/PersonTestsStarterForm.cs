@@ -59,7 +59,7 @@ namespace PersonTests
             }
         }
 
-        private static int TestDisplay()
+        /*private static int TestDisplay()
         {
             try
             {
@@ -72,17 +72,18 @@ namespace PersonTests
             }
 
             return 0;
-            }
+            }*/
 
         private void RunTestsButton_Click(object sender, EventArgs e)
             {
             this.failedTests = 0;
 
             // Run feature tests here
-            this.failedTests += TestDisplay();
+            // this.failedTests += TestDisplay();
             this.failedTests += TestCompare();
-            //this.failedTests += TestReset();
-            //this.failedTests += TestSize();
+
+            // this.failedTests += TestReset();
+            // this.failedTests += TestSize();
             MessageBox.Show(this.failedTests.ToString() + " of 4 tests failed!");
             }
     }

@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents one person saving their name.
     /// </summary>
-    public class Person : IDisplayable, IComparable<Person>
+    public class Person : IComparable<Person>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
@@ -20,7 +20,6 @@
         /// </summary>
         public virtual string Name { get; set; }
 
-
         /// <summary>
         /// Returns a string that represents the person.
         /// </summary>
@@ -31,17 +30,9 @@
         }
 
         /// <summary>
-        /// Displays the name of the Person in a MessageBox.
-        /// </summary>
-        public void Display()
-        {
-            MessageBox.Show(this.Name);
-        }
-
-        /// <summary>
         /// Compares two instances of the Person class.
         /// </summary>
-        /// <param name="other">Is another instance of an object to be compared</param>
+        /// <param name="other">Is another instance of an object to be compared.</param>
         /// <returns>if the return is a positive number, they are the same. If not, a negative number means they are not.</returns>
         public int CompareTo(Person other)
         {
