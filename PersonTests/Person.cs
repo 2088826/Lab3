@@ -28,5 +28,10 @@
         {
             return this.Name;
         }
+
+        public void Reset()
+        {
+            this.Name = string.Empty;
+        }
     }
 }
