@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents one person saving their name.
     /// </summary>
-    public class Person : IMeasurable, IResettable
+    public class Person : IMeasurable, IResettable, IComparable<Person>, IDisplayable
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
@@ -37,6 +37,33 @@
         public void Reset()
         {
             this.Name = string.Empty;
+        }
+
+        /// <summary>
+        /// This method displays the Name of the Person.
+        /// </summary>
+        public void Display()
+        {
+            MessageBox.Show(this.Name);
+        }
+
+
+
+        /// <summary>
+        /// Compares two instances of the Person class.
+        /// </summary>
+        /// <param name="other">Is another instance of an object to be compared.</param>
+        /// <returns>if the return is a positive number, they are the same. If not, a negative number means they are not.</returns>
+        public int CompareTo(Person other)
+        {
+            if (this.Name == other.Name)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
         }
     }
 }
